@@ -37,13 +37,16 @@ class ViewController: UIViewController {
                 print ("Facebook Login Failed. Error \(facebookError)")
             } else {
                 let accessToken = FIRFacebookAuthProvider.credentialWithAccessToken(FBSDKAccessToken.currentAccessToken().tokenString);
-                //print("Successfully logged in with facebook. \(accessToken)")
                 
                 FIRAuth.auth()?.signInWithCredential(accessToken, completion: { (authData: FIRUser?, error: NSError?) in
                     if error != nil {
                         print("Login Failed. \(error.debugDescription)")
                     } else {
                         print("Log in Successful! \(authData?.providerID)")
+                        
+                        let user = ["provider": accessToken.provider]
+                        DataService.ds.createFirebaseUser(authData!.uid, user: user)
+                        
                         NSUserDefaults.standardUserDefaults().setValue(authData?.uid, forKey: KEY_UID)
                         self.performSegueWithIdentifier(SEGUE_LOGGED_IN, sender: nil)
                         
@@ -77,8 +80,8 @@ class ViewController: UIViewController {
                 self.showErrorAlert("Invalid Password", msg: "Please enter a valid password")
             } else {
                 print("Logged in succesfully")
-//                let user: [String: String] = ["person": "email:"]
-//                DataService.ds.createFirebaseUser((authData?.uid)!, user: user)
+                let user: [String: String] = ["provider": "password"]
+                DataService.ds.createFirebaseUser(authData!.uid, user: user)
                 NSUserDefaults.standardUserDefaults().setValue(authData?.uid, forKey: KEY_UID)
                 self.performSegueWithIdentifier(SEGUE_LOGGED_IN, sender: nil)
             }

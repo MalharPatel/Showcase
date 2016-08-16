@@ -25,6 +25,9 @@
 		FDAA843D1D5EE0A100C759E9 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDAA843A1D5EE0A100C759E9 /* FBSDKCoreKit.framework */; };
 		FDAA843E1D5EE0A100C759E9 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDAA843B1D5EE0A100C759E9 /* FBSDKLoginKit.framework */; };
 		FDAA843F1D5EE0A100C759E9 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDAA843C1D5EE0A100C759E9 /* Bolts.framework */; };
+		FDB037561D63B4430085BDC3 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB037551D63B4430085BDC3 /* FeedVC.swift */; };
+		FDB037581D63B4BB0085BDC3 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB037571D63B4BB0085BDC3 /* PostCell.swift */; };
+		FDB0375A1D63C3DD0085BDC3 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB037591D63C3DD0085BDC3 /* Post.swift */; };
 		FDE6C03D1D6150DD00B2D02A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FDE6C03C1D6150DD00B2D02A /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +54,9 @@
 		FDAA843A1D5EE0A100C759E9 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		FDAA843B1D5EE0A100C759E9 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		FDAA843C1D5EE0A100C759E9 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		FDB037551D63B4430085BDC3 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		FDB037571D63B4BB0085BDC3 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		FDB037591D63C3DD0085BDC3 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		FDE6C03C1D6150DD00B2D02A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,7 +129,6 @@
 				FD553E691D5E98C50000A43C /* View */,
 				FD553E681D5E98C00000A43C /* Controller */,
 				FD553E561D5E98500000A43C /* AppDelegate.swift */,
-				FD553E581D5E98500000A43C /* ViewController.swift */,
 				FD553E5A1D5E98500000A43C /* Main.storyboard */,
 				FD553E5D1D5E98500000A43C /* Assets.xcassets */,
 				FD553E5F1D5E98500000A43C /* LaunchScreen.storyboard */,
@@ -136,6 +141,8 @@
 		FD553E681D5E98C00000A43C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				FD553E581D5E98500000A43C /* ViewController.swift */,
+				FDB037551D63B4430085BDC3 /* FeedVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -146,6 +153,7 @@
 				FD553E741D5E9D270000A43C /* MaterialView.swift */,
 				FD553E791D5EA2FF0000A43C /* MaterialButton.swift */,
 				FD553E7B1D5EA5320000A43C /* MaterialTextField.swift */,
+				FDB037571D63B4BB0085BDC3 /* PostCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -153,6 +161,7 @@
 		FD553E6A1D5E98C80000A43C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FDB037591D63C3DD0085BDC3 /* Post.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -317,9 +326,12 @@
 				FD2191B71D614759001FAB5F /* DataService.swift in Sources */,
 				FD553E751D5E9D270000A43C /* MaterialView.swift in Sources */,
 				FD553E591D5E98500000A43C /* ViewController.swift in Sources */,
+				FDB037561D63B4430085BDC3 /* FeedVC.swift in Sources */,
+				FDB037581D63B4BB0085BDC3 /* PostCell.swift in Sources */,
 				FD553E571D5E98500000A43C /* AppDelegate.swift in Sources */,
 				FD553E781D5E9D740000A43C /* Constants.swift in Sources */,
 				FD553E7A1D5EA2FF0000A43C /* MaterialButton.swift in Sources */,
+				FDB0375A1D63C3DD0085BDC3 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
